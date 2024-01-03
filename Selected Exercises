@@ -18,3 +18,14 @@ let sign x = if x > 0 then 1 else if x = 0 then 0 else -1
 
 let area_of_circle r = let pi = 3.14 in pi *. r. *r.
 
+(** Define a function that computes the root mean square of two numbers *) 
+
+let root_mean x y = sqrt ((x *. x +. y *. y) /. 2.)
+
+(** Define a function that takes an integer d and string m as input and returns true just when d and m form a valid date. Here, a valid date has a month that is one of the following abbreviations: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sept, Oct, Nov, Dec. And the day must be a number that is between 1 and the minimum number of days in that month, inclusive. For example, if the month is Jan, then the day is between 1 and 31, inclusive, whereas if the month is Feb, then the day is between 1 and 28, inclusive. *)
+
+let valid_date d m =
+    if m = "Jan" || m = "Mar" || m = "May" || m = "Jul" || m = "Aug" || m = "Oct" || m = "Dec" && d = 31 then true
+    else if m = "Sep" || m = "Apr" || m = "Jun" || m = "Nov" && d = 30 then true
+    else if m = "Feb" && d = 28 then true
+    else false
