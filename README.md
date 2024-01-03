@@ -1,1 +1,1 @@
-Includes various completed OCaml programming exercises from the book "OCaml Programming: Correct + Efficient + Beautiful". Braches will denote the chapter from which the exercisees contained in the branch are from. 
+This branch contains a file with select completed exercises from chapter 2. 
