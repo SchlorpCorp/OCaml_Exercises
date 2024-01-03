@@ -29,3 +29,10 @@ let valid_date d m =
     else if m = "Sep" || m = "Apr" || m = "Jun" || m = "Nov" && d = 30 then true
     else if m = "Feb" && d = 28 then true
     else false
+
+(** Define a recursive function fib : int -> int, such that fib n is the nth number in the Fibonacci sequence *)
+
+let rec fib x = 
+    if x = 1 then 1
+    else if x = 2 then 1
+    else fib (x - 1) + fib (x - 2)
